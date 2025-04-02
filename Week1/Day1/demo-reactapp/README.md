@@ -1,12 +1,23 @@
-# React + Vite
+Setting Up React with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite is a modern build tool that offers faster development and better performance. Here's how to set up a React project with Vite.
 
-Currently, two official plugins are available:
+Installation:
+Make sure you have Node.js installed. To create a new React app using Vite, use the following command:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+npm create vite@latest my-app -- --template react  
 
-## Expanding the ESLint configuration
+Or, if you prefer using Yarn:
+yarn create vite my-app --template react  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Navigate to Project Directory:
+Move into your project folder:
+cd my-app  
+
+Install Dependencies:
+Install the required dependencies:
+npm install  
+
+Run the Development Server:
+Now you can start the development server:
+npm run dev 
