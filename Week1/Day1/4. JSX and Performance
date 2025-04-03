@@ -1,0 +1,63 @@
+JSX and Performance
+While JSX improves code readability and developer productivity, it’s important to consider performance. JSX is transformed into JavaScript function calls, which may have performance implications if not optimized. React handles this efficiently by using a virtual DOM.
+
+Performance Tips:
+Avoid Anonymous Functions: Instead of creating new functions in your JSX directly, define them outside your render methods where possible.
+Key Props: Always provide unique keys for list items for efficient updates.
+
+Why Avoid Anonymous Functions in JSX
+Using anonymous functions directly within JSX can lead to the creation of a new function on every render cycle. 
+This can negatively impact performance, especially if the component re-renders frequently or if the function is used in a loop or mapped over a large list. 
+It can also interfere with React’s diffing algorithm, potentially leading to unnecessary re-renders.
+
+Example of Using an Anonymous Function in JSX
+Here’s an example that demonstrates the downside of using anonymous functions in JSX when handling events.
+
+Less Optimal Example (Using Anonymous Function)
+===============================================
+
+const MyComponent = () => {  
+  const handleClick = (value) => {  
+    console.log('Button clicked:', value);  
+  };  
+
+  return (  
+    <div>  
+      <button onClick={() => handleClick('Button 1')}>Button 1</button>  
+      <button onClick={() => handleClick('Button 2')}>Button 2</button>  
+    </div>  
+  );  
+};  
+
+In the example above:
+Every time MyComponent re-renders, new anonymous functions are created for the onClick events.
+
+More Optimal Example (Using Named Functions)
+============================================
+Instead, you can define the function outside of the JSX:
+
+const MyComponent = () => {  
+  const handleClick = (value) => {  
+    console.log('Button clicked:', value);  
+  };  
+
+  const handleButtonClick = (value) => () => handleClick(value);  
+
+  return (  
+    <div>  
+      <button onClick={handleButtonClick('Button 1')}>Button 1</button>  
+      <button onClick={handleButtonClick('Button 2')}>Button 2</button>  
+    </div>  
+  );  
+};  
+
+In this improved example:
+We define a higher-order function handleButtonClick that returns a new function for handling each button click.
+Now, handleClick is only created once, which is more efficient, especially if MyComponent re-renders frequently.
+
+
+Key Takeaways
+Performance: Avoid creating functions directly in your JSX to prevent performance hits caused by unnecessary re-creation of functions during each render.
+Readability: By defining functions outside of JSX, your code can become cleaner and easier to read.
+Reusability: Separate functions allow you to reuse the same logic without redefining it each time.
+
