@@ -10,6 +10,7 @@ Day 1: Introduction to React (4 hrs)
 ✅ Components & Props: Reusable UI elements (1 hr)
 
 Day 2: State & Events in React (4 hrs)
+
 ✅ useState Hook: Managing component state (1 hr)
 
 ✅ Handling Events in React (onClick, onChange, etc.) (1 hr)
@@ -19,6 +20,7 @@ Day 2: State & Events in React (4 hrs)
 ✅ Lifting State Up: Parent-child communication (1 hr)
 
 Day 3: React Lifecycle & Hooks (4 hrs)
+
 ✅ useEffect Hook: Side effects, API calls, dependencies (2 hrs)
 
 ✅ useContext Hook: Global state without Redux (1 hr)
@@ -26,6 +28,7 @@ Day 3: React Lifecycle & Hooks (4 hrs)
 ✅ Custom Hooks: Reusable business logic (1 hr)
 
 Day 4: Integrating React with ASP.NET Core MVC (4 hrs)
+
 ✅ Setting up an ASP.NET Core MVC backend (1 hr)
 
 ✅ Creating Web API endpoints (Controllers, Dependency Injection) (1 hr)
