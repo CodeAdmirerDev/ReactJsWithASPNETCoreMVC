@@ -1,6 +1,7 @@
 📌 Goal: Get comfortable with React fundamentals and integrate it with ASP.NET Core.
 
 Day 1: Introduction to React (4 hrs)
+
 ✅ What is React? Why React over Angular/Vue? (1 hr)
 
 ✅ Setting up React (Vite & CRA) and folder structure (1 hr)
